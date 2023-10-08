@@ -1,0 +1,16 @@
+import random
+#By MalekAlthubiany
+#simple wordlist generator
+# Function to generate a random number with 9 digits
+def generate_random_number():
+    return str(random.randint(100000000, 199999999))
+
+# Number of entries in the wordlist
+num_entries = 999999
+
+# Generate the wordlist
+wordlist = [f"1{generate_random_number()[1:]}" for _ in range(num_entries)]
+
+# Print the wordlist
+for i, number in enumerate(wordlist[:999999]):
+    print(f"{number}")
